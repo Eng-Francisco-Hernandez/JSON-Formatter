@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import {
   Alert,
@@ -54,6 +54,10 @@ function App() {
     }
     setOpen(false);
   };
+
+  useEffect(() => {
+    formatInput();
+  }, [input]);
 
   return (
     <Box m={3}>
