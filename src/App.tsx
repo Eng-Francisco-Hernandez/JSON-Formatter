@@ -33,6 +33,10 @@ function App() {
   };
 
   const formatInput = () => {
+    if (!input.trim().length) {
+      setOutput("");
+      return;
+    }
     try {
       const parsedInput = JSON.parse(input);
       setOutput(JSON.stringify(parsedInput, null, "\t"));
